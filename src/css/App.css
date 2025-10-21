@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.board{
+    background-color: rgb(81, 163, 163);
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 200px 200px;
+    gap: 20px;
+    padding: 20px;
+}
