@@ -12,3 +12,7 @@
     background-color: white;
     color: black;
 }
+
+.card.true.won{
+    background-color: green;
+}

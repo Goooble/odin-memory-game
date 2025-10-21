@@ -33,6 +33,7 @@ function App() {
         <p>Best Score: {bestScore}</p>
       </div>
       <div className="board">{cards}</div>
+      {score===10?<p className="win">Game Won!</p>:null}
     </div>
   );
 }
