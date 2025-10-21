@@ -1,9 +1,11 @@
 import "./css/card.css"
-function Card(){
+import { useState } from "react"
+function Card({id}){
+    const [isSelected, setSelected] = useState(false)
     return (
-        <div className="card">
-            <p>text</p>
-        </div>
+        <button className="card">
+            <p>{id}</p>
+        </button>
         
     )
 }
