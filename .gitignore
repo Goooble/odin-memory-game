@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+# TO PREVENT ADDING ALL ASSETS
+src/assets
 
 # Editor directories and files
 .vscode/*

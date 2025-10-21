@@ -1,6 +1,6 @@
 import "./css/card.css"
 
-function Card({id, setScore, score, isSelected, setSelected}){
+function Card({id, setScore, score, isSelected, setSelected, pokemon}){
     function handleClick(){
         if(isSelected[id]){
             setScore(0);
@@ -15,10 +15,11 @@ function Card({id, setScore, score, isSelected, setSelected}){
     }
     let className  = "card "// + isSelected[id];
     score===10?className+=" won":null;
+    console.log(pokemon)
     return (
         <button onClick={handleClick} className={className}>
-            <img src="#"/>
-            <p>{id}</p>
+            <img src={pokemon.path} width="auto"/>
+            <p>{pokemon.name}</p>
         </button>
         
     )
