@@ -5,7 +5,7 @@ import './css/App.css'
 function App() {
   const cards = [];
   for(let i = 0; i < 10; i++){
-    cards.push(<Card key={i}></Card>)
+    cards.push(<Card key={i} id={i}></Card>)
   }
 
 
