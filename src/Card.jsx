@@ -1,5 +1,5 @@
 import "./css/card.css"
-import { useState } from "react"
+
 function Card({id, setScore, score, isSelected, setSelected}){
     function handleClick(){
         if(isSelected[id]){
