@@ -1,13 +1,26 @@
 import "./css/card.css"
 import { useState } from "react"
-function Card({id}){
-    const [isSelected, setSelected] = useState(false)
+function Card({id, setScore, score, isSelected, setSelected}){
+    function handleClick(){
+        if(isSelected[id]){
+            setScore(0);
+            setSelected(new Array(10).fill(false))
+        }else{
+            isSelected[id]?setScore(0):setScore(score+1)
+        const array = [...isSelected];
+        array[id] = true;
+        setSelected(array)   
+        }
+        
+    }
     return (
-        <button onClick={()=>setSelected(true)} className={"card " + isSelected}>
+        <button onClick={handleClick} className={"card " + isSelected[id]}>
             <p>{id}</p>
         </button>
         
     )
 }
+
+
 
 export default Card
