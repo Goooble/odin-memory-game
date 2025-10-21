@@ -18,8 +18,9 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
   const [isSelected, setSelected] = useState(new Array(10).fill(false));
   const [pokemons, setPokemons] = useState(new Array(10).fill({name:"", path:""}))
-  // let newGame = 0;//used to make api calls whenver game resets
-  //api call for
+  const [isWon, setWon] = useState(0);
+  //sprites in teh assets aint even used gng, directly getting from github
+  //api call for pokemon
   useEffect(() => {
     let ignore = false;
     const pokemonArray = [];
@@ -63,7 +64,7 @@ function App() {
     return () => {
       ignore = true;
     };
-  }, []);
+  }, [isWon]);
 
   if (score > bestScore) setBestScore(score);
   for (let i = 0; i < 10; i++) {
@@ -76,6 +77,8 @@ function App() {
         isSelected={isSelected}
         setSelected={setSelected}
         pokemon={pokemons[i]}
+        isWon = {isWon}
+        setWon={setWon}
       ></Card>
     );
   }

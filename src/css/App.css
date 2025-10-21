@@ -18,7 +18,7 @@ body {
 .board{
     background-color: rgb(81, 163, 163);
     width: 80vw;
-    height: 70vh;
+    /* height: 70vh; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr;
