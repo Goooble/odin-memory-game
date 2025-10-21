@@ -1,7 +1,15 @@
 .card{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card img{
+    width: 180px;
+    flex-grow: 1;
+    background-color: rgb(252, 75, 75);
 }
 
 .card.false{

@@ -17,6 +17,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [isSelected, setSelected] = useState(new Array(10).fill(false));
+  let newGame = 0;//used to make api calls whenver game resets
+  
 
   if (score > bestScore) setBestScore(score);
   for (let i = 0; i < 10; i++) {

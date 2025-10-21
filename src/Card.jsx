@@ -13,10 +13,11 @@ function Card({id, setScore, score, isSelected, setSelected}){
         }
         
     }
-    let className  = "card " + isSelected[id];
+    let className  = "card "// + isSelected[id];
     score===10?className+=" won":null;
     return (
         <button onClick={handleClick} className={className}>
+            <img src="#"/>
             <p>{id}</p>
         </button>
         
