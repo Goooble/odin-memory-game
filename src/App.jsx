@@ -91,6 +91,7 @@ function App() {
         <p>Score: {score}</p>
         <p>Best Score: {bestScore}</p>
       </div>
+      <p>Don't click on the same pokemon twice</p>
       <div className="board">{cards}</div>
       {score === 10 ? <p className="win">Game Won!</p> : null}
     </div>
